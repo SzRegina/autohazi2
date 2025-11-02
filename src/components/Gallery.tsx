@@ -9,7 +9,6 @@ export default function Gallery() {
           <Link to={`/cars/${c.id}`}>
             <img src={c.img} alt={c.name} />
           </Link>
-          <figcaption>{c.name}</figcaption>
         </figure>
       ))}
     </div>

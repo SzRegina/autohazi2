@@ -12,14 +12,12 @@ export default function App() {
     <div className="app">
       <header className="header">
         <h1>Webshop</h1>
-        <p className="subtitle">Találd meg a következő autód.</p>
       </header>
 
       <NavBar />
 
       <main className="content">
         <section className="section">
-          <h2>Galéria</h2>
           <Gallery />
         </section>
       </main>
