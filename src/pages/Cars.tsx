@@ -1,31 +1,22 @@
-import { useEffect, useState } from "react";
-import CarCard from "../components/CarCard"
-import { cars as seed, type Car } from "../data/cars";
+import { Link } from "react-router-dom";
+import { cars } from "../data/cars";
 
 export default function Cars() {
-  const [list, setList] = useState<Car[]>([]);
-  const [q, setQ] = useState("");
-
-  useEffect(() => {
-    // itt lehetne fetch is – most seed
-    setList(seed);
-  }, []);
-
-  const filtered = list.filter(c =>
-    (c.name + " " + c.brand).toLowerCase().includes(q.toLowerCase())
-  );
-
   return (
-    <main className="container">
+    <main className="content">
       <h2>Autóink</h2>
-      <input
-        placeholder="Keresés…"
-        value={q}
-        onChange={e => setQ(e.target.value)}
-        className="search"
-      />
       <div className="grid">
-        {filtered.map(c => <CarCard key={c.id} car={c} />)}
+        {cars.map(c => (
+          <article className="card" key={c.id}>
+            <img src={c.img} alt={c.name} />
+            <h3>{c.name}</h3>
+            <p className="muted">{c.brand}</p>
+            <strong>{c.price.toLocaleString()} €</strong>
+            <div style={{ marginTop: 8 }}>
+              <Link to={`/cars/${c.id}`}>Részletek</Link>
+            </div>
+          </article>
+        ))}
       </div>
     </main>
   );

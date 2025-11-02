@@ -1,24 +1,30 @@
 import { useEffect } from "react";
-import { Routes, Route, Navigate } from "react-router-dom";
 import NavBar from "./components/NavBar";
-import Home from "./pages/Home";
-import Cars from "./pages/Cars";
+import Gallery from "./components/Gallery"
+import Footer from "./components/Footer";
 
 export default function App() {
-  // Követelmény: title tagben a csapattagok neve
   useEffect(() => {
     document.title = "Szépréthy Regina & Bíró Eszter";
   }, []);
 
   return (
     <div className="app">
+      <header className="header">
+        <h1>Webshop</h1>
+        <p className="subtitle">Találd meg a következő autód.</p>
+      </header>
+
       <NavBar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/cars" element={<Cars />} />
-        <Route path="*" element={<Navigate to="/" replace />} />
-      </Routes>
+
+      <main className="content">
+        <section className="section">
+          <h2>Galéria</h2>
+          <Gallery />
+        </section>
+      </main>
+
+      <Footer authors={["Szépréthy Regina", "Bíró Eszter"]} />
     </div>
   );
 }
-

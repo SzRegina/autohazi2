@@ -1,9 +1,10 @@
+import { NavLink } from "react-router-dom";
+
 export default function NavBar() {
   return (
-    <header style={{ padding: "1rem", borderBottom: "1px solid #ddd" }}>
-      <h1>Webshop</h1>
-    </header>
+    <nav className="nav">
+      <NavLink to="/" end className="nav-link">Főoldal</NavLink>
+      <NavLink to="/cars" className="nav-link">Autók</NavLink>
+    </nav>
   );
 }
-
-

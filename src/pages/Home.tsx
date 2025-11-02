@@ -1,12 +1,17 @@
+import Gallery from "../components/Gallery";
+
 export default function Home() {
   return (
-    <main className="container">
-      <section className="hero">
-        <h1>Üdv a Webshopban!</h1>
-        <p>Találd meg a következő autód.</p>
+    <main className="content">
+      <header className="header">
+        <h1>Webshop</h1>
+        <p className="subtitle">Találd meg a következő autód.</p>
+      </header>
+
+      <section className="section">
+        <h2>Galéria</h2>
+        <Gallery />
       </section>
-      {/* később: kiemelt modellek gridje / CTA gomb */}
     </main>
   );
 }
-
