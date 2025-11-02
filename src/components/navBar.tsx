@@ -1,8 +1,9 @@
-export default function navBar() {
+export default function NavBar() {
   return (
-    <main style={{ padding: "2rem" }}>
-      <h1>Üdvözlünk a Webshopban!</h1>
-      <p>Válassz egy autót a kínálatból!</p>
-    </main>
+    <header style={{ padding: "1rem", borderBottom: "1px solid #ddd" }}>
+      <h1>Webshop</h1>
+    </header>
   );
 }
+
+

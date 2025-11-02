@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
-import NavBar from "./components/navBar";
+import NavBar from "./components/NavBar";
 import Home from "./pages/Home";
 import Cars from "./pages/Cars";
 
 export default function App() {
   // Követelmény: title tagben a csapattagok neve
   useEffect(() => {
-    document.title = "Webshop – Regina & Partner";
+    document.title = "Szépréthy Regina & Bíró Eszter";
   }, []);
 
   return (

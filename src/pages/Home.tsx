@@ -1,8 +1,12 @@
 export default function Home() {
   return (
-    <main style={{ padding: "2rem" }}>
-      <h1>Üdvözlünk a Webshopban!</h1>
-      <p>Válassz egy autót a kínálatból!</p>
+    <main className="container">
+      <section className="hero">
+        <h1>Üdv a Webshopban!</h1>
+        <p>Találd meg a következő autód.</p>
+      </section>
+      {/* később: kiemelt modellek gridje / CTA gomb */}
     </main>
   );
 }
+
